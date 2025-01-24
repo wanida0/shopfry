@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>wanida</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">MINT Shop </a>
+            </div>
+            <ul class="links">
+                <li> <a href="hero">หน้าแรก</a></li>
+                <li> <a href="about">สั่งซื้อ </a></li>
+                <li> <a href="gallery">โปรโมชั่น </a></li>
+                <li> <a href="contact">รีวิว </a></li>
+            </ul>
+             <a href="#" class="action_btn">sign up :sign in </a>
+            <div class="toggle_btn">
+               <i class="fa-solid fa-bars"></i>
+           </div>
+        </div>
+        <div class="dropdown_menu"> 
+                <li> <a href="hero">หน้าแรก</a></li>
+                <li> <a href="about">สั่งซื้อ </a></li>
+                <li> <a href="gallery">โปรโมชั่น </a></li>
+                <li> <a href="contact">รีวิว </a></li>
+                <a href="#" class="action_btn">sign up :sign in </a>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>ไก่ทอดกรอบ กรอบนอกนุ่มใน</h1>
+        <div class="medium-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="#"><i class="fa-brands fa-line"></i> </a>
+                <a href="#"><i class="fa-brands fa-instagram"></i> </a>
+         </div>
+        <div class="left-icons">
+                <a href="#"><i class="fa-brands fa-tiktok"></i> </a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i> </a> 
+        </div>
+        </section>
+</main>
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document. querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function() {
+        dropDownMenu.classList .toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+        
+        toggleBtnIcon.classList = isOpen
+        ? (toggleBtnIcon.classList.replace("fa-bars"," fa-rectangle-xmark" ))
+        : (toggleBtnIcon.classList.replace(" fa-rectangle-xmark","fa-bars"))
+        
+    }
+</script>
+</body>
+</html>

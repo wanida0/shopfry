@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif ;
+}
+  body {
+    height: 100vh;
+    background-color: aqua;
+    background-image: url('https://www.ajinomotofoodservicethailand.com/wp-content/uploads/2018/12/14.shutterstock_209859640.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+   .hero{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: azure;
+   }
+  li {
+   list-style: none;
+    }
+a{
+    text-decoration: none;
+    color: rgb(69, 70, 139);
+    font-size: 2rem;
+}
+a:hover{
+    color: rgb(0, 0, 0);
+}
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+        width: 100%;
+        height: 90px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.navbar .logo a { 
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(37, 22, 22);
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: aliceblue;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: rgb(109, 122, 110);
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.2;
+    color: aliceblue;
+}
+
+.action_btn:active {
+    scale: 0.95;
+    color: rgb(0, 238, 255);
+}
+
+/* dropdown_menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 3rem;
+    top: 80px;
+    height: 0px;
+    width: 300px;
+    background-color: rgb(117, 141, 163);
+    backdrop-filter:  blur(15);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s  cubic-bezier(0.175, 0.885, 0.32, .275);
+}
+.dropdown_menu .opan {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* HERO */
+section#hero {
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: bisque;
+}
+#hero h1 {
+    font-size:4rem ;
+    margin-bottom: 1rem;
+}
+.medium-icons{
+    z-index: 800;
+    position: absolute;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5 ease;
+}
+.medium-icons a{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+.medium-icons a:not(:last-child){
+    margin-bottom:50px;
+}
+.medium-icons a:hover{
+    transform: scale(1.7);
+    color: blueviolet;
+}
+
+.left-icons{
+    position: absolute;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5 ease;
+}
+.left-icons a{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+.left-icons a:not(:last-child){
+    margin-bottom:50px;
+}
+.left-icons a:hover{
+    transform: scale(1.7);
+    color: blueviolet;
+}
+
+
+
+/*responsive desize */
+@media (max-width:990px) {
+    .navbar  .links,
+    .navbar  .action_btn {
+        display: none;
+    }
+.navbar .toggle_btn {
+    display: block;
+ }
+ .dropdown_menu  {
+    display: block;
+ }
+}
+@media (max-width:550px) {
+ .dropdown_menu {
+    left: 2rem;
+    width: unset;
+ }
+}
